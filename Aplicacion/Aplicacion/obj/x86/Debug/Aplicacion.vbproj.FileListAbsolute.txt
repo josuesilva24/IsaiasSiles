@@ -1,0 +1,49 @@
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\bin\Debug\Aplicacion.exe
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\bin\Debug\Aplicacion.pdb
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\bin\Debug\Aplicacion.xml
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.Login.resources
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.Menu.resources
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.Resources.resources
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.vbproj.GenerateResource.Cache
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.exe
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.xml
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.pdb
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.Alternativa.resources
+C:\Users\Nani-Chan\AppData\Local\Temporary Projects\Aplicacion\obj\x86\Debug\Aplicacion.Anillo.resources
+C:\Users\Nani-Chan\documents\visual studio 2010\Projects\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.exe
+C:\Users\Nani-Chan\documents\visual studio 2010\Projects\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.xml
+C:\Users\Nani-Chan\documents\visual studio 2010\Projects\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.pdb
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.exe
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.xml
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.pdb
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Collo.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Login.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Menu.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Resources.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Sitio.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.vbproj.GenerateResource.Cache
+F:\Aplicacion\Aplicacion\bin\Debug\Aplicacion.exe
+F:\Aplicacion\Aplicacion\bin\Debug\Aplicacion.pdb
+F:\Aplicacion\Aplicacion\bin\Debug\Aplicacion.xml
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Permisos.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Energia.resources
+F:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Form1.resources
+E:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.exe
+E:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.xml
+E:\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.pdb
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.exe
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.xml
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.pdb
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\bin\Debug\Aplicacion.exe
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\bin\Debug\Aplicacion.pdb
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\bin\Debug\Aplicacion.xml
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Collo.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Energia.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Form1.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Form2.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Login.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Menu.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Resources.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Permisos.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.Sitio.resources
+C:\Users\isiles\Desktop\Isaias Siles Archivos\Personal\ARGENTINA\v1\Aplicacion\Aplicacion\obj\x86\Debug\Aplicacion.vbproj.GenerateResource.Cache
