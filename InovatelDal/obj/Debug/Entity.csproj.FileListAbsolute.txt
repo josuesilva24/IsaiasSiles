@@ -1,5 +1,0 @@
-E:\Proyectos\Siles\InovatelDal\bin\Debug\InovatelDal.dll.config
-E:\Proyectos\Siles\InovatelDal\bin\Debug\InovatelDal.dll
-E:\Proyectos\Siles\InovatelDal\bin\Debug\InovatelDal.pdb
-E:\Proyectos\Siles\InovatelDal\obj\Debug\InovatelDal.dll
-E:\Proyectos\Siles\InovatelDal\obj\Debug\InovatelDal.pdb

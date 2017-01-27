@@ -35,14 +35,19 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlternativaDAL.cs" />
+    <Compile Include="AnilloDAL.cs" />
     <Compile Include="DataAccessLogicBase.cs" />
+    <Compile Include="EnergiaDAL.cs" />
+    <Compile Include="OperadoraDAL.cs" />
+    <Compile Include="PermisoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InovatelDal\Entity.csproj">
