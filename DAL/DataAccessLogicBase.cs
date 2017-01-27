@@ -1,5 +1,6 @@
 ﻿using System.Data.Objects;
 using System.Linq;
+using Entity;
 
 namespace DAL
 {
