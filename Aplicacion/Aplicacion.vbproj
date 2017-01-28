@@ -72,214 +72,40 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlternativaA.Designer.vb">
-      <DependentUpon>AlternativaA.vb</DependentUpon>
+    <Compile Include="Anilloo.Designer.vb">
+      <DependentUpon>Anilloo.vb</DependentUpon>
     </Compile>
-    <Compile Include="AlternativaA.vb">
+    <Compile Include="Anilloo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlternativaC.Designer.vb">
-      <DependentUpon>AlternativaC.vb</DependentUpon>
+    <Compile Include="AcercaD.Designer.vb">
+      <DependentUpon>AcercaD.vb</DependentUpon>
     </Compile>
-    <Compile Include="AlternativaC.vb">
+    <Compile Include="AcercaD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlternativaD.Designer.vb">
-      <DependentUpon>AlternativaD.vb</DependentUpon>
+    <Compile Include="Cambio.Designer.vb">
+      <DependentUpon>Cambio.vb</DependentUpon>
     </Compile>
-    <Compile Include="AlternativaD.vb">
+    <Compile Include="Cambio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlternativaP.Designer.vb">
-      <DependentUpon>AlternativaP.vb</DependentUpon>
+    <Compile Include="Collo.Designer.vb">
+      <DependentUpon>Collo.vb</DependentUpon>
     </Compile>
-    <Compile Include="AlternativaP.vb">
+    <Compile Include="Collo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlternativaPA.Designer.vb">
-      <DependentUpon>AlternativaPA.vb</DependentUpon>
+    <Compile Include="Alternativa.Designer.vb">
+      <DependentUpon>Alternativa.vb</DependentUpon>
     </Compile>
-    <Compile Include="AlternativaPA.vb">
+    <Compile Include="Alternativa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlternativaPR.Designer.vb">
-      <DependentUpon>AlternativaPR.vb</DependentUpon>
+    <Compile Include="Energia.Designer.vb">
+      <DependentUpon>Energia.vb</DependentUpon>
     </Compile>
-    <Compile Include="AlternativaPR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloA.Designer.vb">
-      <DependentUpon>AnilloA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloC.Designer.vb">
-      <DependentUpon>AnilloC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloD.Designer.vb">
-      <DependentUpon>AnilloD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloE.Designer.vb">
-      <DependentUpon>AnilloE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloP.Designer.vb">
-      <DependentUpon>AnilloP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloPA.Designer.vb">
-      <DependentUpon>AnilloPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnilloPR.Designer.vb">
-      <DependentUpon>AnilloPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnilloPR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioA.Designer.vb">
-      <DependentUpon>CambioA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioC.Designer.vb">
-      <DependentUpon>CambioC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioD.Designer.vb">
-      <DependentUpon>CambioD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioE.Designer.vb">
-      <DependentUpon>CambioE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioP.Designer.vb">
-      <DependentUpon>CambioP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioPA.Designer.vb">
-      <DependentUpon>CambioPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambioPR.Designer.vb">
-      <DependentUpon>CambioPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CambioPR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloA.Designer.vb">
-      <DependentUpon>ColloA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloC.Designer.vb">
-      <DependentUpon>ColloC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloD.Designer.vb">
-      <DependentUpon>ColloD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloE.Designer.vb">
-      <DependentUpon>ColloE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloP.Designer.vb">
-      <DependentUpon>ColloP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloPA.Designer.vb">
-      <DependentUpon>ColloPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColloPR.Designer.vb">
-      <DependentUpon>ColloPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ColloPR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaA.Designer.vb">
-      <DependentUpon>EnergiaA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AlternativaE.Designer.vb">
-      <DependentUpon>AlternativaE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AlternativaE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaC.Designer.vb">
-      <DependentUpon>EnergiaC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaD.Designer.vb">
-      <DependentUpon>EnergiaD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaE.Designer.vb">
-      <DependentUpon>EnergiaE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaP.Designer.vb">
-      <DependentUpon>EnergiaP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaPA.Designer.vb">
-      <DependentUpon>EnergiaPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnergiaPRvb.Designer.vb">
-      <DependentUpon>EnergiaPRvb.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EnergiaPRvb.vb">
+    <Compile Include="Energia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -289,46 +115,10 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuA.Designer.vb">
-      <DependentUpon>MenuA.vb</DependentUpon>
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="MenuA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuC.Designer.vb">
-      <DependentUpon>MenuC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuD.Designer.vb">
-      <DependentUpon>MenuD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuE.Designer.vb">
-      <DependentUpon>MenuE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuP.Designer.vb">
-      <DependentUpon>MenuP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPA.Designer.vb">
-      <DependentUpon>MenuPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPR.Designer.vb">
-      <DependentUpon>MenuPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPR.vb">
+    <Compile Include="Menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -346,268 +136,49 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Paises.Designer.vb">
-      <DependentUpon>Paises.vb</DependentUpon>
+    <Compile Include="Permisos.Designer.vb">
+      <DependentUpon>Permisos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Paises.vb">
+    <Compile Include="Permisos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PermisosA.Designer.vb">
-      <DependentUpon>PermisosA.vb</DependentUpon>
+    <Compile Include="Sitio.Designer.vb">
+      <DependentUpon>Sitio.vb</DependentUpon>
     </Compile>
-    <Compile Include="PermisosA.vb">
+    <Compile Include="Sitio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PermisosC.Designer.vb">
-      <DependentUpon>PermisosC.vb</DependentUpon>
+    <Compile Include="Usuario.Designer.vb">
+      <DependentUpon>Usuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="PermisosC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PermisosD.Designer.vb">
-      <DependentUpon>PermisosD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PermisosD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PermisosE.Designer.vb">
-      <DependentUpon>PermisosE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PermisosE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PermisosP.Designer.vb">
-      <DependentUpon>PermisosP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PermisosP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PermisosPA.Designer.vb">
-      <DependentUpon>PermisosPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PermisosPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PermisosPR.Designer.vb">
-      <DependentUpon>PermisosPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PermisosPR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioA.Designer.vb">
-      <DependentUpon>SitioA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioC.Designer.vb">
-      <DependentUpon>SitioC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioD.Designer.vb">
-      <DependentUpon>SitioD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioE.Designer.vb">
-      <DependentUpon>SitioE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioP.Designer.vb">
-      <DependentUpon>SitioP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioPA.Designer.vb">
-      <DependentUpon>SitioPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SitioPR.Designer.vb">
-      <DependentUpon>SitioPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SitioPR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioA.Designer.vb">
-      <DependentUpon>UsuarioA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioC.Designer.vb">
-      <DependentUpon>UsuarioC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioD.Designer.vb">
-      <DependentUpon>UsuarioD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioE.Designer.vb">
-      <DependentUpon>UsuarioE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioP.Designer.vb">
-      <DependentUpon>UsuarioP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioPA.Designer.vb">
-      <DependentUpon>UsuarioPA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioPA.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuarioPR.Designer.vb">
-      <DependentUpon>UsuarioPR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioPR.vb">
+    <Compile Include="Usuario.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AlternativaA.resx">
-      <DependentUpon>AlternativaA.vb</DependentUpon>
+    <EmbeddedResource Include="Anilloo.resx">
+      <DependentUpon>Anilloo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlternativaC.resx">
-      <DependentUpon>AlternativaC.vb</DependentUpon>
+    <EmbeddedResource Include="AcercaD.resx">
+      <DependentUpon>AcercaD.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlternativaD.resx">
-      <DependentUpon>AlternativaD.vb</DependentUpon>
+    <EmbeddedResource Include="Cambio.resx">
+      <DependentUpon>Cambio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlternativaP.resx">
-      <DependentUpon>AlternativaP.vb</DependentUpon>
+    <EmbeddedResource Include="Collo.resx">
+      <DependentUpon>Collo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlternativaPA.resx">
-      <DependentUpon>AlternativaPA.vb</DependentUpon>
+    <EmbeddedResource Include="Alternativa.resx">
+      <DependentUpon>Alternativa.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlternativaPR.resx">
-      <DependentUpon>AlternativaPR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloA.resx">
-      <DependentUpon>AnilloA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloC.resx">
-      <DependentUpon>AnilloC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloD.resx">
-      <DependentUpon>AnilloD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloE.resx">
-      <DependentUpon>AnilloE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloP.resx">
-      <DependentUpon>AnilloP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloPA.resx">
-      <DependentUpon>AnilloPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnilloPR.resx">
-      <DependentUpon>AnilloPR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioA.resx">
-      <DependentUpon>CambioA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioC.resx">
-      <DependentUpon>CambioC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioD.resx">
-      <DependentUpon>CambioD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioE.resx">
-      <DependentUpon>CambioE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioP.resx">
-      <DependentUpon>CambioP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioPA.resx">
-      <DependentUpon>CambioPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CambioPr.resx">
-      <DependentUpon>CambioPR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloA.resx">
-      <DependentUpon>ColloA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloC.resx">
-      <DependentUpon>ColloC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloD.resx">
-      <DependentUpon>ColloD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloE.resx">
-      <DependentUpon>ColloE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloP.resx">
-      <DependentUpon>ColloP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloPA.resx">
-      <DependentUpon>ColloPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColloPR.resx">
-      <DependentUpon>ColloPR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaA.resx">
-      <DependentUpon>EnergiaA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AlternativaE.resx">
-      <DependentUpon>AlternativaE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaC.resx">
-      <DependentUpon>EnergiaC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaD.resx">
-      <DependentUpon>EnergiaD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaE.resx">
-      <DependentUpon>EnergiaE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaP.resx">
-      <DependentUpon>EnergiaP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaPA.resx">
-      <DependentUpon>EnergiaPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnergiaPRvb.resx">
-      <DependentUpon>EnergiaPRvb.vb</DependentUpon>
+    <EmbeddedResource Include="Energia.resx">
+      <DependentUpon>Energia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuA.resx">
-      <DependentUpon>MenuA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuC.resx">
-      <DependentUpon>MenuC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuD.resx">
-      <DependentUpon>MenuD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuE.resx">
-      <DependentUpon>MenuE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuP.resx">
-      <DependentUpon>MenuP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPA.resx">
-      <DependentUpon>MenuPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPR.resx">
-      <DependentUpon>MenuPR.vb</DependentUpon>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -615,71 +186,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paises.resx">
-      <DependentUpon>Paises.vb</DependentUpon>
+    <EmbeddedResource Include="Permisos.resx">
+      <DependentUpon>Permisos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PermisosA.resx">
-      <DependentUpon>PermisosA.vb</DependentUpon>
+    <EmbeddedResource Include="Sitio.resx">
+      <DependentUpon>Sitio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PermisosC.resx">
-      <DependentUpon>PermisosC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PermisosD.resx">
-      <DependentUpon>PermisosD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PermisosE.resx">
-      <DependentUpon>PermisosE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PermisosP.resx">
-      <DependentUpon>PermisosP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PermisosPA.resx">
-      <DependentUpon>PermisosPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PermisosPR.resx">
-      <DependentUpon>PermisosPR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioA.resx">
-      <DependentUpon>SitioA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioC.resx">
-      <DependentUpon>SitioC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioD.resx">
-      <DependentUpon>SitioD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioE.resx">
-      <DependentUpon>SitioE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioP.resx">
-      <DependentUpon>SitioP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioPA.resx">
-      <DependentUpon>SitioPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SitioPR.resx">
-      <DependentUpon>SitioPR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioA.resx">
-      <DependentUpon>UsuarioA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioC.resx">
-      <DependentUpon>UsuarioC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioD.resx">
-      <DependentUpon>UsuarioD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioE.resx">
-      <DependentUpon>UsuarioE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioP.resx">
-      <DependentUpon>UsuarioP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioPA.resx">
-      <DependentUpon>UsuarioPA.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioPR.resx">
-      <DependentUpon>UsuarioPR.vb</DependentUpon>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

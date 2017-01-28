@@ -17,6 +17,19 @@ using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
+#region EDM Relationship Metadata
+
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Sitio_Cuidad", "Cuidad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entity.Cuidad), "Sitio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Sitio), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Departamento_Vista_Departamento", "Departamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entity.Departamento), "Departamento_Vista", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Departamento_Vista), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Usuario_Departamento", "Departamento", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Entity.Departamento), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Usuario), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Departamento_Vista_Vistas", "Vista", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entity.Vista), "Departamento_Vista", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Departamento_Vista), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Energia_Tipo_Suministro_Electrico", "Tipo_Suministro_Electrico", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Entity.Tipo_Suministro_Electrico), "Energia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Energia), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Sitio_Operadora", "Operadora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entity.Operadora), "Sitio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Sitio), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Sitio_Provincia", "Provincia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entity.Provincia), "Sitio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Sitio), true)]
+[assembly: EdmRelationshipAttribute("SilesModel", "FK_Sitio_Tipo_Sitio", "Tipo_Sitio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entity.Tipo_Sitio), "Sitio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entity.Sitio), true)]
+
+#endregion
+
 namespace Entity
 {
     #region Contexts
@@ -304,6 +317,102 @@ namespace Entity
             }
         }
         private ObjectSet<Tipo_Suministro_Electrico> _Tipo_Suministro_Electrico;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Departamento> Departamentoes
+        {
+            get
+            {
+                if ((_Departamentoes == null))
+                {
+                    _Departamentoes = base.CreateObjectSet<Departamento>("Departamentoes");
+                }
+                return _Departamentoes;
+            }
+        }
+        private ObjectSet<Departamento> _Departamentoes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Departamento_Vista> Departamento_Vista
+        {
+            get
+            {
+                if ((_Departamento_Vista == null))
+                {
+                    _Departamento_Vista = base.CreateObjectSet<Departamento_Vista>("Departamento_Vista");
+                }
+                return _Departamento_Vista;
+            }
+        }
+        private ObjectSet<Departamento_Vista> _Departamento_Vista;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<sysdiagram> sysdiagrams
+        {
+            get
+            {
+                if ((_sysdiagrams == null))
+                {
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
+                }
+                return _sysdiagrams;
+            }
+        }
+        private ObjectSet<sysdiagram> _sysdiagrams;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Tipo_Sitio> Tipo_Sitio
+        {
+            get
+            {
+                if ((_Tipo_Sitio == null))
+                {
+                    _Tipo_Sitio = base.CreateObjectSet<Tipo_Sitio>("Tipo_Sitio");
+                }
+                return _Tipo_Sitio;
+            }
+        }
+        private ObjectSet<Tipo_Sitio> _Tipo_Sitio;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Usuario> Usuarios
+        {
+            get
+            {
+                if ((_Usuarios == null))
+                {
+                    _Usuarios = base.CreateObjectSet<Usuario>("Usuarios");
+                }
+                return _Usuarios;
+            }
+        }
+        private ObjectSet<Usuario> _Usuarios;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Vista> Vistas
+        {
+            get
+            {
+                if ((_Vistas == null))
+                {
+                    _Vistas = base.CreateObjectSet<Vista>("Vistas");
+                }
+                return _Vistas;
+            }
+        }
+        private ObjectSet<Vista> _Vistas;
 
         #endregion
 
@@ -427,6 +536,54 @@ namespace Entity
         public void AddToTipo_Suministro_Electrico(Tipo_Suministro_Electrico tipo_Suministro_Electrico)
         {
             base.AddObject("Tipo_Suministro_Electrico", tipo_Suministro_Electrico);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Departamentoes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToDepartamentoes(Departamento departamento)
+        {
+            base.AddObject("Departamentoes", departamento);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Departamento_Vista EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToDepartamento_Vista(Departamento_Vista departamento_Vista)
+        {
+            base.AddObject("Departamento_Vista", departamento_Vista);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
+        {
+            base.AddObject("sysdiagrams", sysdiagram);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Tipo_Sitio EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTipo_Sitio(Tipo_Sitio tipo_Sitio)
+        {
+            base.AddObject("Tipo_Sitio", tipo_Sitio);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Usuarios EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToUsuarios(Usuario usuario)
+        {
+            base.AddObject("Usuarios", usuario);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Vistas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToVistas(Vista vista)
+        {
+            base.AddObject("Vistas", vista);
         }
 
         #endregion
@@ -2096,12 +2253,14 @@ namespace Entity
         /// <param name="codigo_Torresec">Initial value of the Codigo_Torresec property.</param>
         /// <param name="nombre_Torresec">Initial value of the Nombre_Torresec property.</param>
         /// <param name="hay_Normativas">Initial value of the Hay_Normativas property.</param>
-        public static Anillo CreateAnillo(global::System.Int32 codigo_Torresec, global::System.String nombre_Torresec, global::System.Boolean hay_Normativas)
+        /// <param name="id">Initial value of the Id property.</param>
+        public static Anillo CreateAnillo(global::System.Int32 codigo_Torresec, global::System.String nombre_Torresec, global::System.Boolean hay_Normativas, global::System.Int32 id)
         {
             Anillo anillo = new Anillo();
             anillo.Codigo_Torresec = codigo_Torresec;
             anillo.Nombre_Torresec = nombre_Torresec;
             anillo.Hay_Normativas = hay_Normativas;
+            anillo.Id = id;
             return anillo;
         }
 
@@ -2687,6 +2846,33 @@ namespace Entity
         private global::System.String _Tipo_Normativa;
         partial void OnTipo_NormativaChanging(global::System.String value);
         partial void OnTipo_NormativaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
 
         #endregion
 
@@ -2774,6 +2960,404 @@ namespace Entity
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Cuidad", "Sitio")]
+        public EntityCollection<Sitio> Sitios
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Sitio>("SilesModel.FK_Sitio_Cuidad", "Sitio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Sitio>("SilesModel.FK_Sitio_Cuidad", "Sitio", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="Departamento")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Departamento : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Departamento object.
+        /// </summary>
+        /// <param name="id_Departamento">Initial value of the Id_Departamento property.</param>
+        /// <param name="departamento1">Initial value of the Departamento1 property.</param>
+        public static Departamento CreateDepartamento(global::System.Int32 id_Departamento, global::System.String departamento1)
+        {
+            Departamento departamento = new Departamento();
+            departamento.Id_Departamento = id_Departamento;
+            departamento.Departamento1 = departamento1;
+            return departamento;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id_Departamento
+        {
+            get
+            {
+                return _Id_Departamento;
+            }
+            set
+            {
+                if (_Id_Departamento != value)
+                {
+                    OnId_DepartamentoChanging(value);
+                    ReportPropertyChanging("Id_Departamento");
+                    _Id_Departamento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id_Departamento");
+                    OnId_DepartamentoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id_Departamento;
+        partial void OnId_DepartamentoChanging(global::System.Int32 value);
+        partial void OnId_DepartamentoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Departamento1
+        {
+            get
+            {
+                return _Departamento1;
+            }
+            set
+            {
+                OnDepartamento1Changing(value);
+                ReportPropertyChanging("Departamento1");
+                _Departamento1 = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Departamento1");
+                OnDepartamento1Changed();
+            }
+        }
+        private global::System.String _Departamento1;
+        partial void OnDepartamento1Changing(global::System.String value);
+        partial void OnDepartamento1Changed();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Departamento_Vista_Departamento", "Departamento_Vista")]
+        public EntityCollection<Departamento_Vista> Departamento_Vista
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Departamento_Vista>("SilesModel.FK_Departamento_Vista_Departamento", "Departamento_Vista");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Departamento_Vista>("SilesModel.FK_Departamento_Vista_Departamento", "Departamento_Vista", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Usuario_Departamento", "Usuario")]
+        public EntityCollection<Usuario> Usuarios
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Usuario>("SilesModel.FK_Usuario_Departamento", "Usuario");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Usuario>("SilesModel.FK_Usuario_Departamento", "Usuario", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="Departamento_Vista")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Departamento_Vista : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Departamento_Vista object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="id_Vista">Initial value of the Id_Vista property.</param>
+        /// <param name="id_Departamento">Initial value of the Id_Departamento property.</param>
+        /// <param name="lectura">Initial value of the Lectura property.</param>
+        /// <param name="escritura">Initial value of the Escritura property.</param>
+        public static Departamento_Vista CreateDepartamento_Vista(global::System.Int32 id, global::System.Int32 id_Vista, global::System.Int32 id_Departamento, global::System.Boolean lectura, global::System.Boolean escritura)
+        {
+            Departamento_Vista departamento_Vista = new Departamento_Vista();
+            departamento_Vista.Id = id;
+            departamento_Vista.Id_Vista = id_Vista;
+            departamento_Vista.Id_Departamento = id_Departamento;
+            departamento_Vista.Lectura = lectura;
+            departamento_Vista.Escritura = escritura;
+            return departamento_Vista;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id_Vista
+        {
+            get
+            {
+                return _Id_Vista;
+            }
+            set
+            {
+                OnId_VistaChanging(value);
+                ReportPropertyChanging("Id_Vista");
+                _Id_Vista = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Id_Vista");
+                OnId_VistaChanged();
+            }
+        }
+        private global::System.Int32 _Id_Vista;
+        partial void OnId_VistaChanging(global::System.Int32 value);
+        partial void OnId_VistaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id_Departamento
+        {
+            get
+            {
+                return _Id_Departamento;
+            }
+            set
+            {
+                OnId_DepartamentoChanging(value);
+                ReportPropertyChanging("Id_Departamento");
+                _Id_Departamento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Id_Departamento");
+                OnId_DepartamentoChanged();
+            }
+        }
+        private global::System.Int32 _Id_Departamento;
+        partial void OnId_DepartamentoChanging(global::System.Int32 value);
+        partial void OnId_DepartamentoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean Lectura
+        {
+            get
+            {
+                return _Lectura;
+            }
+            set
+            {
+                OnLecturaChanging(value);
+                ReportPropertyChanging("Lectura");
+                _Lectura = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Lectura");
+                OnLecturaChanged();
+            }
+        }
+        private global::System.Boolean _Lectura;
+        partial void OnLecturaChanging(global::System.Boolean value);
+        partial void OnLecturaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean Escritura
+        {
+            get
+            {
+                return _Escritura;
+            }
+            set
+            {
+                OnEscrituraChanging(value);
+                ReportPropertyChanging("Escritura");
+                _Escritura = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Escritura");
+                OnEscrituraChanged();
+            }
+        }
+        private global::System.Boolean _Escritura;
+        partial void OnEscrituraChanging(global::System.Boolean value);
+        partial void OnEscrituraChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Departamento_Vista_Departamento", "Departamento")]
+        public Departamento Departamento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("SilesModel.FK_Departamento_Vista_Departamento", "Departamento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("SilesModel.FK_Departamento_Vista_Departamento", "Departamento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Departamento> DepartamentoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("SilesModel.FK_Departamento_Vista_Departamento", "Departamento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Departamento>("SilesModel.FK_Departamento_Vista_Departamento", "Departamento", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Departamento_Vista_Vistas", "Vista")]
+        public Vista Vista
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vista>("SilesModel.FK_Departamento_Vista_Vistas", "Vista").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vista>("SilesModel.FK_Departamento_Vista_Vistas", "Vista").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Vista> VistaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vista>("SilesModel.FK_Departamento_Vista_Vistas", "Vista");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Vista>("SilesModel.FK_Departamento_Vista_Vistas", "Vista", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -2791,11 +3375,13 @@ namespace Entity
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="id_Alternativa">Initial value of the Id_Alternativa property.</param>
-        public static Energia CreateEnergia(global::System.Int32 id, global::System.Int32 id_Alternativa)
+        /// <param name="id_Sitio">Initial value of the Id_Sitio property.</param>
+        public static Energia CreateEnergia(global::System.Int32 id, global::System.Int32 id_Alternativa, global::System.Int32 id_Sitio)
         {
             Energia energia = new Energia();
             energia.Id = id;
             energia.Id_Alternativa = id_Alternativa;
+            energia.Id_Sitio = id_Sitio;
             return energia;
         }
 
@@ -3525,10 +4111,76 @@ namespace Entity
         private Nullable<global::System.DateTime> _Fecha_Ultima_Medicion_OP3;
         partial void OnFecha_Ultima_Medicion_OP3Changing(Nullable<global::System.DateTime> value);
         partial void OnFecha_Ultima_Medicion_OP3Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id_Sitio
+        {
+            get
+            {
+                return _Id_Sitio;
+            }
+            set
+            {
+                OnId_SitioChanging(value);
+                ReportPropertyChanging("Id_Sitio");
+                _Id_Sitio = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Id_Sitio");
+                OnId_SitioChanged();
+            }
+        }
+        private global::System.Int32 _Id_Sitio;
+        partial void OnId_SitioChanging(global::System.Int32 value);
+        partial void OnId_SitioChanged();
 
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Energia_Tipo_Suministro_Electrico", "Tipo_Suministro_Electrico")]
+        public Tipo_Suministro_Electrico Tipo_Suministro_Electrico
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Tipo_Suministro_Electrico>("SilesModel.FK_Energia_Tipo_Suministro_Electrico", "Tipo_Suministro_Electrico").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Tipo_Suministro_Electrico>("SilesModel.FK_Energia_Tipo_Suministro_Electrico", "Tipo_Suministro_Electrico").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Tipo_Suministro_Electrico> Tipo_Suministro_ElectricoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Tipo_Suministro_Electrico>("SilesModel.FK_Energia_Tipo_Suministro_Electrico", "Tipo_Suministro_Electrico");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Tipo_Suministro_Electrico>("SilesModel.FK_Energia_Tipo_Suministro_Electrico", "Tipo_Suministro_Electrico", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -3721,6 +4373,32 @@ namespace Entity
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Operadora", "Sitio")]
+        public EntityCollection<Sitio> Sitios
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Sitio>("SilesModel.FK_Sitio_Operadora", "Sitio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Sitio>("SilesModel.FK_Sitio_Operadora", "Sitio", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -4657,6 +5335,32 @@ namespace Entity
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Provincia", "Sitio")]
+        public EntityCollection<Sitio> Sitios
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Sitio>("SilesModel.FK_Sitio_Provincia", "Sitio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Sitio>("SilesModel.FK_Sitio_Provincia", "Sitio", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -5142,6 +5846,319 @@ namespace Entity
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Cuidad", "Cuidad")]
+        public Cuidad Cuidad
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cuidad>("SilesModel.FK_Sitio_Cuidad", "Cuidad").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cuidad>("SilesModel.FK_Sitio_Cuidad", "Cuidad").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Cuidad> CuidadReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cuidad>("SilesModel.FK_Sitio_Cuidad", "Cuidad");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cuidad>("SilesModel.FK_Sitio_Cuidad", "Cuidad", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Operadora", "Operadora")]
+        public Operadora Operadora
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Operadora>("SilesModel.FK_Sitio_Operadora", "Operadora").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Operadora>("SilesModel.FK_Sitio_Operadora", "Operadora").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Operadora> OperadoraReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Operadora>("SilesModel.FK_Sitio_Operadora", "Operadora");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Operadora>("SilesModel.FK_Sitio_Operadora", "Operadora", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Provincia", "Provincia")]
+        public Provincia Provincia
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Provincia>("SilesModel.FK_Sitio_Provincia", "Provincia").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Provincia>("SilesModel.FK_Sitio_Provincia", "Provincia").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Provincia> ProvinciaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Provincia>("SilesModel.FK_Sitio_Provincia", "Provincia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Provincia>("SilesModel.FK_Sitio_Provincia", "Provincia", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Tipo_Sitio", "Tipo_Sitio")]
+        public Tipo_Sitio Tipo_Sitio1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Tipo_Sitio>("SilesModel.FK_Sitio_Tipo_Sitio", "Tipo_Sitio").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Tipo_Sitio>("SilesModel.FK_Sitio_Tipo_Sitio", "Tipo_Sitio").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Tipo_Sitio> Tipo_Sitio1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Tipo_Sitio>("SilesModel.FK_Sitio_Tipo_Sitio", "Tipo_Sitio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Tipo_Sitio>("SilesModel.FK_Sitio_Tipo_Sitio", "Tipo_Sitio", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="sysdiagram")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class sysdiagram : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new sysdiagram object.
+        /// </summary>
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        {
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+
+    
     }
     
     /// <summary>
@@ -5396,6 +6413,115 @@ namespace Entity
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="Tipo_Sitio")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Tipo_Sitio : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Tipo_Sitio object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="tipo">Initial value of the Tipo property.</param>
+        public static Tipo_Sitio CreateTipo_Sitio(global::System.Int32 id, global::System.String tipo)
+        {
+            Tipo_Sitio tipo_Sitio = new Tipo_Sitio();
+            tipo_Sitio.Id = id;
+            tipo_Sitio.Tipo = tipo;
+            return tipo_Sitio;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Tipo
+        {
+            get
+            {
+                return _Tipo;
+            }
+            set
+            {
+                OnTipoChanging(value);
+                ReportPropertyChanging("Tipo");
+                _Tipo = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Tipo");
+                OnTipoChanged();
+            }
+        }
+        private global::System.String _Tipo;
+        partial void OnTipoChanging(global::System.String value);
+        partial void OnTipoChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Sitio_Tipo_Sitio", "Sitio")]
+        public EntityCollection<Sitio> Sitios
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Sitio>("SilesModel.FK_Sitio_Tipo_Sitio", "Sitio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Sitio>("SilesModel.FK_Sitio_Tipo_Sitio", "Sitio", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="Tipo_Suministro_Electrico")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -5474,6 +6600,368 @@ namespace Entity
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Energia_Tipo_Suministro_Electrico", "Energia")]
+        public EntityCollection<Energia> Energias
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Energia>("SilesModel.FK_Energia_Tipo_Suministro_Electrico", "Energia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Energia>("SilesModel.FK_Energia_Tipo_Suministro_Electrico", "Energia", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="Usuario")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Usuario : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Usuario object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="nombre">Initial value of the Nombre property.</param>
+        /// <param name="nombre_Usuario">Initial value of the Nombre_Usuario property.</param>
+        /// <param name="apellidos">Initial value of the Apellidos property.</param>
+        /// <param name="contrasena">Initial value of the Contrasena property.</param>
+        public static Usuario CreateUsuario(global::System.Int32 id, global::System.String nombre, global::System.String nombre_Usuario, global::System.String apellidos, global::System.String contrasena)
+        {
+            Usuario usuario = new Usuario();
+            usuario.Id = id;
+            usuario.Nombre = nombre;
+            usuario.Nombre_Usuario = nombre_Usuario;
+            usuario.Apellidos = apellidos;
+            usuario.Contrasena = contrasena;
+            return usuario;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                OnIdChanging(value);
+                ReportPropertyChanging("Id");
+                _Id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Id");
+                OnIdChanged();
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre_Usuario
+        {
+            get
+            {
+                return _Nombre_Usuario;
+            }
+            set
+            {
+                if (_Nombre_Usuario != value)
+                {
+                    OnNombre_UsuarioChanging(value);
+                    ReportPropertyChanging("Nombre_Usuario");
+                    _Nombre_Usuario = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("Nombre_Usuario");
+                    OnNombre_UsuarioChanged();
+                }
+            }
+        }
+        private global::System.String _Nombre_Usuario;
+        partial void OnNombre_UsuarioChanging(global::System.String value);
+        partial void OnNombre_UsuarioChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Apellidos
+        {
+            get
+            {
+                return _Apellidos;
+            }
+            set
+            {
+                OnApellidosChanging(value);
+                ReportPropertyChanging("Apellidos");
+                _Apellidos = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Apellidos");
+                OnApellidosChanged();
+            }
+        }
+        private global::System.String _Apellidos;
+        partial void OnApellidosChanging(global::System.String value);
+        partial void OnApellidosChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Contrasena
+        {
+            get
+            {
+                return _Contrasena;
+            }
+            set
+            {
+                OnContrasenaChanging(value);
+                ReportPropertyChanging("Contrasena");
+                _Contrasena = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Contrasena");
+                OnContrasenaChanged();
+            }
+        }
+        private global::System.String _Contrasena;
+        partial void OnContrasenaChanging(global::System.String value);
+        partial void OnContrasenaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Id_Departamento
+        {
+            get
+            {
+                return _Id_Departamento;
+            }
+            set
+            {
+                OnId_DepartamentoChanging(value);
+                ReportPropertyChanging("Id_Departamento");
+                _Id_Departamento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Id_Departamento");
+                OnId_DepartamentoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Id_Departamento;
+        partial void OnId_DepartamentoChanging(Nullable<global::System.Int32> value);
+        partial void OnId_DepartamentoChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Usuario_Departamento", "Departamento")]
+        public Departamento Departamento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("SilesModel.FK_Usuario_Departamento", "Departamento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("SilesModel.FK_Usuario_Departamento", "Departamento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Departamento> DepartamentoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("SilesModel.FK_Usuario_Departamento", "Departamento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Departamento>("SilesModel.FK_Usuario_Departamento", "Departamento", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SilesModel", Name="Vista")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Vista : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Vista object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="vista1">Initial value of the Vista1 property.</param>
+        public static Vista CreateVista(global::System.Int32 id, global::System.String vista1)
+        {
+            Vista vista = new Vista();
+            vista.Id = id;
+            vista.Vista1 = vista1;
+            return vista;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Vista1
+        {
+            get
+            {
+                return _Vista1;
+            }
+            set
+            {
+                OnVista1Changing(value);
+                ReportPropertyChanging("Vista1");
+                _Vista1 = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Vista1");
+                OnVista1Changed();
+            }
+        }
+        private global::System.String _Vista1;
+        partial void OnVista1Changing(global::System.String value);
+        partial void OnVista1Changed();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SilesModel", "FK_Departamento_Vista_Vistas", "Departamento_Vista")]
+        public EntityCollection<Departamento_Vista> Departamento_Vista
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Departamento_Vista>("SilesModel.FK_Departamento_Vista_Vistas", "Departamento_Vista");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Departamento_Vista>("SilesModel.FK_Departamento_Vista_Vistas", "Departamento_Vista", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
 
     #endregion

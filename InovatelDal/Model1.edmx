@@ -4,11 +4,41 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SilesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="SilesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="SilesModelStoreContainer">
           <EntitySet Name="Alternativa" EntityType="SilesModel.Store.Alternativa" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Anillo" EntityType="SilesModel.Store.Anillo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Anillo" EntityType="SilesModel.Store.Anillo" store:Type="Tables" store:Schema="dbo" store:Name="Anillo">
+            <DefiningQuery>SELECT 
+      [Anillo].[Id] AS [Id], 
+      [Anillo].[Codigo_Torresec] AS [Codigo_Torresec], 
+      [Anillo].[Nombre_Torresec] AS [Nombre_Torresec], 
+      [Anillo].[Operador_Ancla] AS [Operador_Ancla], 
+      [Anillo].[Codigo_Operador_Ancla] AS [Codigo_Operador_Ancla], 
+      [Anillo].[Anillo_Latitud] AS [Anillo_Latitud], 
+      [Anillo].[Anillo_Logitud] AS [Anillo_Logitud], 
+      [Anillo].[Radio_Busqueda] AS [Radio_Busqueda], 
+      [Anillo].[Altura_Requerida_RF] AS [Altura_Requerida_RF], 
+      [Anillo].[Altura_TX_Requerida] AS [Altura_TX_Requerida], 
+      [Anillo].[Region] AS [Region], 
+      [Anillo].[Id_Provincia] AS [Id_Provincia], 
+      [Anillo].[Municipio_Departamento] AS [Municipio_Departamento], 
+      [Anillo].[Localidad] AS [Localidad], 
+      [Anillo].[Id_Tipo_Anillo] AS [Id_Tipo_Anillo], 
+      [Anillo].[Nombre_Ofrecido_Proy_Esp] AS [Nombre_Ofrecido_Proy_Esp], 
+      [Anillo].[Buscador] AS [Buscador], 
+      [Anillo].[Fecha_Asignacion_Anillo_Por_Operador] AS [Fecha_Asignacion_Anillo_Por_Operador], 
+      [Anillo].[Fecha_Asignacion_Buscador] AS [Fecha_Asignacion_Buscador], 
+      [Anillo].[Fecha_Presentacion_Informe_Anillo_Buscador] AS [Fecha_Presentacion_Informe_Anillo_Buscador], 
+      [Anillo].[Fecha_Presentacion_Informe_Anillo_Operador] AS [Fecha_Presentacion_Informe_Anillo_Operador], 
+      [Anillo].[Estado_Anillo] AS [Estado_Anillo], 
+      [Anillo].[Fecha_Estado_Anillo] AS [Fecha_Estado_Anillo], 
+      [Anillo].[Hay_Normativas] AS [Hay_Normativas], 
+      [Anillo].[Tipo_Normativa] AS [Tipo_Normativa]
+      FROM [dbo].[Anillo] AS [Anillo]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Cuidad" EntityType="SilesModel.Store.Cuidad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Departamento" EntityType="SilesModel.Store.Departamento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Departamento_Vista" EntityType="SilesModel.Store.Departamento_Vista" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Energia" EntityType="SilesModel.Store.Energia" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Moneda" EntityType="SilesModel.Store.Moneda" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Operadora" EntityType="SilesModel.Store.Operadora" store:Type="Tables" Schema="dbo" />
@@ -17,10 +47,46 @@
           <EntitySet Name="Permisos" EntityType="SilesModel.Store.Permisos" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Provincia" EntityType="SilesModel.Store.Provincia" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sitio" EntityType="SilesModel.Store.Sitio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="SilesModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Tipo_Anillo" EntityType="SilesModel.Store.Tipo_Anillo" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Tipo_Estructura" EntityType="SilesModel.Store.Tipo_Estructura" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Tipo_Instalacion" EntityType="SilesModel.Store.Tipo_Instalacion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo_Sitio" EntityType="SilesModel.Store.Tipo_Sitio" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Tipo_Suministro_Electrico" EntityType="SilesModel.Store.Tipo_Suministro_Electrico" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="SilesModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vistas" EntityType="SilesModel.Store.Vistas" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Departamento_Vista_Departamento" Association="SilesModel.Store.FK_Departamento_Vista_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Departamento_Vista" EntitySet="Departamento_Vista" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Vista_Vistas" Association="SilesModel.Store.FK_Departamento_Vista_Vistas">
+            <End Role="Vistas" EntitySet="Vistas" />
+            <End Role="Departamento_Vista" EntitySet="Departamento_Vista" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Energia_Tipo_Suministro_Electrico" Association="SilesModel.Store.FK_Energia_Tipo_Suministro_Electrico">
+            <End Role="Tipo_Suministro_Electrico" EntitySet="Tipo_Suministro_Electrico" />
+            <End Role="Energia" EntitySet="Energia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Cuidad" Association="SilesModel.Store.FK_Sitio_Cuidad">
+            <End Role="Cuidad" EntitySet="Cuidad" />
+            <End Role="Sitio" EntitySet="Sitio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Operadora" Association="SilesModel.Store.FK_Sitio_Operadora">
+            <End Role="Operadora" EntitySet="Operadora" />
+            <End Role="Sitio" EntitySet="Sitio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Provincia" Association="SilesModel.Store.FK_Sitio_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Sitio" EntitySet="Sitio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Tipo_Sitio" Association="SilesModel.Store.FK_Sitio_Tipo_Sitio">
+            <End Role="Tipo_Sitio" EntitySet="Tipo_Sitio" />
+            <End Role="Sitio" EntitySet="Sitio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Departamento" Association="SilesModel.Store.FK_Usuario_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Alternativa">
           <Key>
@@ -93,11 +159,18 @@
           <Property Name="Fecha_Ofrecido_OP_C" Type="datetime" />
           <Property Name="Id_Anillo" Type="int" />
         </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Siles.dbo.Anillo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
         <EntityType Name="Anillo">
           <Key>
+            <PropertyRef Name="Id" />
             <PropertyRef Name="Codigo_Torresec" />
+            
+            
           </Key>
-          <Property Name="Codigo_Torresec" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo_Torresec" Type="varchar" Nullable="false" MaxLength="250" />
           <Property Name="Nombre_Torresec" Type="varchar" Nullable="false" MaxLength="250" />
           <Property Name="Operador_Ancla" Type="varchar" MaxLength="250" />
           <Property Name="Codigo_Operador_Ancla" Type="varchar" MaxLength="250" />
@@ -129,12 +202,30 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="250" />
         </EntityType>
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="Id_Departamento" />
+          </Key>
+          <Property Name="Id_Departamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Departamento" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Departamento_Vista">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Vista" Type="int" Nullable="false" />
+          <Property Name="Id_Departamento" Type="int" Nullable="false" />
+          <Property Name="Lectura" Type="bit" Nullable="false" />
+          <Property Name="Escritura" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Energia">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Id_Alternativa" Type="int" Nullable="false" />
+          <Property Name="Id_Sitio" Type="int" Nullable="false" />
           <Property Name="Proveedor_Gestion_Suministro" Type="varchar" MaxLength="250" />
           <Property Name="Fecha_Pedido_Suministro_Electrico_A_Prestadora" Type="datetime" />
           <Property Name="Fecha_Entrega_Suministro_Electrico_A_Prestadora" Type="datetime" />
@@ -255,6 +346,16 @@
           <Property Name="Entrega_Obra_Real" Type="datetime" />
           <Property Name="Observaciones_De_Construccion" Type="varchar(max)" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="Tipo_Anillo">
           <Key>
             <PropertyRef Name="Id" />
@@ -276,6 +377,13 @@
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="250" />
         </EntityType>
+        <EntityType Name="Tipo_Sitio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
         <EntityType Name="Tipo_Suministro_Electrico">
           <Key>
             <PropertyRef Name="Id" />
@@ -283,8 +391,121 @@
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="250" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Nombre_Usuario" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Nombre_Usuario" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Apellidos" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Contrasena" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Id_Departamento" Type="int" />
+        </EntityType>
+        <EntityType Name="Vistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vista" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <Association Name="FK_Departamento_Vista_Departamento">
+          <End Role="Departamento" Type="SilesModel.Store.Departamento" Multiplicity="1" />
+          <End Role="Departamento_Vista" Type="SilesModel.Store.Departamento_Vista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="Departamento_Vista">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Vista_Vistas">
+          <End Role="Vistas" Type="SilesModel.Store.Vistas" Multiplicity="1" />
+          <End Role="Departamento_Vista" Type="SilesModel.Store.Departamento_Vista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vistas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departamento_Vista">
+              <PropertyRef Name="Id_Vista" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Energia_Tipo_Suministro_Electrico">
+          <End Role="Tipo_Suministro_Electrico" Type="SilesModel.Store.Tipo_Suministro_Electrico" Multiplicity="0..1" />
+          <End Role="Energia" Type="SilesModel.Store.Energia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Suministro_Electrico">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Energia">
+              <PropertyRef Name="Id_Tipo_Suministro_Electrico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Cuidad">
+          <End Role="Cuidad" Type="SilesModel.Store.Cuidad" Multiplicity="1" />
+          <End Role="Sitio" Type="SilesModel.Store.Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="Cuidad_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Operadora">
+          <End Role="Operadora" Type="SilesModel.Store.Operadora" Multiplicity="1" />
+          <End Role="Sitio" Type="SilesModel.Store.Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operadora">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="OperadoraId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Provincia">
+          <End Role="Provincia" Type="SilesModel.Store.Provincia" Multiplicity="1" />
+          <End Role="Sitio" Type="SilesModel.Store.Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="Provincia_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Tipo_Sitio">
+          <End Role="Tipo_Sitio" Type="SilesModel.Store.Tipo_Sitio" Multiplicity="1" />
+          <End Role="Sitio" Type="SilesModel.Store.Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Sitio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="Tipo_Sitio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Departamento">
+          <End Role="Departamento" Type="SilesModel.Store.Departamento" Multiplicity="0..1" />
+          <End Role="Usuario" Type="SilesModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SilesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -304,6 +525,44 @@
           <EntitySet Name="Tipo_Estructura" EntityType="SilesModel.Tipo_Estructura" />
           <EntitySet Name="Tipo_Instalacion" EntityType="SilesModel.Tipo_Instalacion" />
           <EntitySet Name="Tipo_Suministro_Electrico" EntityType="SilesModel.Tipo_Suministro_Electrico" />
+          <EntitySet Name="Departamentoes" EntityType="SilesModel.Departamento" />
+          <EntitySet Name="Departamento_Vista" EntityType="SilesModel.Departamento_Vista" />
+          <EntitySet Name="sysdiagrams" EntityType="SilesModel.sysdiagram" />
+          <EntitySet Name="Tipo_Sitio" EntityType="SilesModel.Tipo_Sitio" />
+          <EntitySet Name="Usuarios" EntityType="SilesModel.Usuario" />
+          <EntitySet Name="Vistas" EntityType="SilesModel.Vista" />
+          <AssociationSet Name="FK_Sitio_Cuidad" Association="SilesModel.FK_Sitio_Cuidad">
+            <End Role="Cuidad" EntitySet="Cuidads" />
+            <End Role="Sitio" EntitySet="Sitios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Vista_Departamento" Association="SilesModel.FK_Departamento_Vista_Departamento">
+            <End Role="Departamento" EntitySet="Departamentoes" />
+            <End Role="Departamento_Vista" EntitySet="Departamento_Vista" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Departamento" Association="SilesModel.FK_Usuario_Departamento">
+            <End Role="Departamento" EntitySet="Departamentoes" />
+            <End Role="Usuario" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Departamento_Vista_Vistas" Association="SilesModel.FK_Departamento_Vista_Vistas">
+            <End Role="Vista" EntitySet="Vistas" />
+            <End Role="Departamento_Vista" EntitySet="Departamento_Vista" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Energia_Tipo_Suministro_Electrico" Association="SilesModel.FK_Energia_Tipo_Suministro_Electrico">
+            <End Role="Tipo_Suministro_Electrico" EntitySet="Tipo_Suministro_Electrico" />
+            <End Role="Energia" EntitySet="Energias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Operadora" Association="SilesModel.FK_Sitio_Operadora">
+            <End Role="Operadora" EntitySet="Operadoras" />
+            <End Role="Sitio" EntitySet="Sitios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Provincia" Association="SilesModel.FK_Sitio_Provincia">
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Sitio" EntitySet="Sitios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sitio_Tipo_Sitio" Association="SilesModel.FK_Sitio_Tipo_Sitio">
+            <End Role="Tipo_Sitio" EntitySet="Tipo_Sitio" />
+            <End Role="Sitio" EntitySet="Sitios" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Alternativa">
           <Key>
@@ -379,6 +638,7 @@
         <EntityType Name="Anillo">
           <Key>
             <PropertyRef Name="Codigo_Torresec" />
+            <PropertyRef Name="Id" />
           </Key>
           <Property Name="Codigo_Torresec" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre_Torresec" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
@@ -404,6 +664,7 @@
           <Property Name="Fecha_Estado_Anillo" Type="DateTime" />
           <Property Name="Hay_Normativas" Type="Boolean" Nullable="false" />
           <Property Name="Tipo_Normativa" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Cuidad">
           <Key>
@@ -411,6 +672,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Sitios" Relationship="SilesModel.FK_Sitio_Cuidad" FromRole="Cuidad" ToRole="Sitio" />
         </EntityType>
         <EntityType Name="Energia">
           <Key>
@@ -446,6 +708,8 @@
           <Property Name="Fecha_Medicion_Anterior_OP3" Type="DateTime" />
           <Property Name="Acumulado_Ultima_Medicion_OP3" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="Fecha_Ultima_Medicion_OP3" Type="DateTime" />
+          <Property Type="Int32" Name="Id_Sitio" Nullable="false" />
+          <NavigationProperty Name="Tipo_Suministro_Electrico" Relationship="SilesModel.FK_Energia_Tipo_Suministro_Electrico" FromRole="Energia" ToRole="Tipo_Suministro_Electrico" />
         </EntityType>
         <EntityType Name="Moneda">
           <Key>
@@ -461,6 +725,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Operadora1" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Sitios" Relationship="SilesModel.FK_Sitio_Operadora" FromRole="Operadora" ToRole="Sitio" />
         </EntityType>
         <EntityType Name="Pai">
           <Key>
@@ -514,6 +779,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Sitios" Relationship="SilesModel.FK_Sitio_Provincia" FromRole="Provincia" ToRole="Sitio" />
         </EntityType>
         <EntityType Name="Sitio">
           <Key>
@@ -537,6 +803,10 @@
           <Property Name="Inicio_Obra_Real" Type="DateTime" />
           <Property Name="Entrega_Obra_Real" Type="DateTime" />
           <Property Name="Observaciones_De_Construccion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cuidad" Relationship="SilesModel.FK_Sitio_Cuidad" FromRole="Sitio" ToRole="Cuidad" />
+          <NavigationProperty Name="Operadora" Relationship="SilesModel.FK_Sitio_Operadora" FromRole="Sitio" ToRole="Operadora" />
+          <NavigationProperty Name="Provincia" Relationship="SilesModel.FK_Sitio_Provincia" FromRole="Sitio" ToRole="Provincia" />
+          <NavigationProperty Name="Tipo_Sitio1" Relationship="SilesModel.FK_Sitio_Tipo_Sitio" FromRole="Sitio" ToRole="Tipo_Sitio" />
         </EntityType>
         <EntityType Name="Tipo_Anillo">
           <Key>
@@ -565,7 +835,163 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Tipo" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Energias" Relationship="SilesModel.FK_Energia_Tipo_Suministro_Electrico" FromRole="Tipo_Suministro_Electrico" ToRole="Energia" />
         </EntityType>
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="Id_Departamento" />
+          </Key>
+          <Property Type="Int32" Name="Id_Departamento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Departamento1" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Departamento_Vista" Relationship="SilesModel.FK_Departamento_Vista_Departamento" FromRole="Departamento" ToRole="Departamento_Vista" />
+          <NavigationProperty Name="Usuarios" Relationship="SilesModel.FK_Usuario_Departamento" FromRole="Departamento" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Departamento_Vista">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Id_Vista" Nullable="false" />
+          <Property Type="Int32" Name="Id_Departamento" Nullable="false" />
+          <Property Type="Boolean" Name="Lectura" Nullable="false" />
+          <Property Type="Boolean" Name="Escritura" Nullable="false" />
+          <NavigationProperty Name="Departamento" Relationship="SilesModel.FK_Departamento_Vista_Departamento" FromRole="Departamento_Vista" ToRole="Departamento" />
+          <NavigationProperty Name="Vista" Relationship="SilesModel.FK_Departamento_Vista_Vistas" FromRole="Departamento_Vista" ToRole="Vista" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tipo_Sitio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Sitios" Relationship="SilesModel.FK_Sitio_Tipo_Sitio" FromRole="Tipo_Sitio" ToRole="Sitio" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Nombre_Usuario" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nombre_Usuario" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Apellidos" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Id_Departamento" />
+          <NavigationProperty Name="Departamento" Relationship="SilesModel.FK_Usuario_Departamento" FromRole="Usuario" ToRole="Departamento" />
+        </EntityType>
+        <EntityType Name="Vista">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Vista1" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Departamento_Vista" Relationship="SilesModel.FK_Departamento_Vista_Vistas" FromRole="Vista" ToRole="Departamento_Vista" />
+        </EntityType>
+        <Association Name="FK_Sitio_Cuidad">
+          <End Type="SilesModel.Cuidad" Role="Cuidad" Multiplicity="1" />
+          <End Type="SilesModel.Sitio" Role="Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="Cuidad_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Vista_Departamento">
+          <End Type="SilesModel.Departamento" Role="Departamento" Multiplicity="1" />
+          <End Type="SilesModel.Departamento_Vista" Role="Departamento_Vista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="Departamento_Vista">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Departamento">
+          <End Type="SilesModel.Departamento" Role="Departamento" Multiplicity="0..1" />
+          <End Type="SilesModel.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departamento_Vista_Vistas">
+          <End Type="SilesModel.Vista" Role="Vista" Multiplicity="1" />
+          <End Type="SilesModel.Departamento_Vista" Role="Departamento_Vista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vista">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departamento_Vista">
+              <PropertyRef Name="Id_Vista" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Energia_Tipo_Suministro_Electrico">
+          <End Type="SilesModel.Tipo_Suministro_Electrico" Role="Tipo_Suministro_Electrico" Multiplicity="0..1" />
+          <End Type="SilesModel.Energia" Role="Energia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Suministro_Electrico">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Energia">
+              <PropertyRef Name="Id_Tipo_Suministro_Electrico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Operadora">
+          <End Type="SilesModel.Operadora" Role="Operadora" Multiplicity="1" />
+          <End Type="SilesModel.Sitio" Role="Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operadora">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="OperadoraId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Provincia">
+          <End Type="SilesModel.Provincia" Role="Provincia" Multiplicity="1" />
+          <End Type="SilesModel.Sitio" Role="Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="Provincia_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sitio_Tipo_Sitio">
+          <End Type="SilesModel.Tipo_Sitio" Role="Tipo_Sitio" Multiplicity="1" />
+          <End Type="SilesModel.Sitio" Role="Sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Sitio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sitio">
+              <PropertyRef Name="Tipo_Sitio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -647,6 +1073,7 @@
           <EntitySetMapping Name="Anilloes">
             <EntityTypeMapping TypeName="SilesModel.Anillo">
               <MappingFragment StoreEntitySet="Anillo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Codigo_Torresec" ColumnName="Codigo_Torresec" />
                 <ScalarProperty Name="Nombre_Torresec" ColumnName="Nombre_Torresec" />
                 <ScalarProperty Name="Operador_Ancla" ColumnName="Operador_Ancla" />
@@ -685,6 +1112,7 @@
           <EntitySetMapping Name="Energias">
             <EntityTypeMapping TypeName="SilesModel.Energia">
               <MappingFragment StoreEntitySet="Energia">
+                <ScalarProperty Name="Id_Sitio" ColumnName="Id_Sitio" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Id_Alternativa" ColumnName="Id_Alternativa" />
                 <ScalarProperty Name="Proveedor_Gestion_Suministro" ColumnName="Proveedor_Gestion_Suministro" />
@@ -848,6 +1276,64 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Departamentoes">
+            <EntityTypeMapping TypeName="SilesModel.Departamento">
+              <MappingFragment StoreEntitySet="Departamento">
+                <ScalarProperty Name="Departamento1" ColumnName="Departamento" />
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departamento_Vista">
+            <EntityTypeMapping TypeName="SilesModel.Departamento_Vista">
+              <MappingFragment StoreEntitySet="Departamento_Vista">
+                <ScalarProperty Name="Escritura" ColumnName="Escritura" />
+                <ScalarProperty Name="Lectura" ColumnName="Lectura" />
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+                <ScalarProperty Name="Id_Vista" ColumnName="Id_Vista" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SilesModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_Sitio">
+            <EntityTypeMapping TypeName="SilesModel.Tipo_Sitio">
+              <MappingFragment StoreEntitySet="Tipo_Sitio">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="SilesModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vistas">
+            <EntityTypeMapping TypeName="SilesModel.Vista">
+              <MappingFragment StoreEntitySet="Vistas">
+                <ScalarProperty Name="Vista1" ColumnName="Vista" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -868,7 +1354,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="Model1" ZoomLevel="55">
+      <Diagram Name="Model1" ZoomLevel="19">
         <EntityTypeShape EntityType="SilesModel.Alternativa" Width="1.5" PointX="0.75" PointY="0.75" Height="13.710673828125" IsExpanded="true" />
         <EntityTypeShape EntityType="SilesModel.Anillo" Width="1.5" PointX="2.75" PointY="0.75" Height="5.634013671875" IsExpanded="true" />
         <EntityTypeShape EntityType="SilesModel.Cuidad" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4033821614583326" IsExpanded="true" />
@@ -884,6 +1370,57 @@
         <EntityTypeShape EntityType="SilesModel.Tipo_Estructura" Width="1.5" PointX="8.75" PointY="10.75" Height="1.4033821614583388" IsExpanded="true" />
         <EntityTypeShape EntityType="SilesModel.Tipo_Instalacion" Width="1.5" PointX="10.75" PointY="9.75" Height="1.4033821614583388" IsExpanded="true" />
         <EntityTypeShape EntityType="SilesModel.Tipo_Suministro_Electrico" Width="1.5" PointX="2.75" PointY="11.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="SilesModel.Departamento" Width="1.5" PointX="11.375" PointY="15" Height="1.7879850260416692" />
+        <EntityTypeShape EntityType="SilesModel.Departamento_Vista" Width="1.5" PointX="13.625" PointY="14.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="SilesModel.sysdiagram" Width="1.5" PointX="13.375" PointY="3.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="SilesModel.Tipo_Sitio" Width="1.5" PointX="13.375" PointY="0.875" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="SilesModel.Usuario" Width="1.5" PointX="13.625" PointY="17.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="SilesModel.Vista" Width="1.5" PointX="11.375" PointY="12" Height="1.5956835937500031" />
+        <AssociationConnector Association="SilesModel.FK_Sitio_Cuidad" >
+          <ConnectorPoint PointX="6.25" PointY="1.5478417968749998" />
+          <ConnectorPoint PointX="6.5" PointY="1.5478417968749998" />
+          <ConnectorPoint PointX="6.5" PointY="2.59568359375" />
+          <ConnectorPoint PointX="11.5" PointY="2.59568359375" />
+          <ConnectorPoint PointX="11.5" PointY="3.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Departamento_Vista_Departamento" >
+          <ConnectorPoint PointX="12.875" PointY="15.893992513020834" />
+          <ConnectorPoint PointX="13.625" PointY="15.893992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Usuario_Departamento" >
+          <ConnectorPoint PointX="12.125" PointY="16.787985026041667" />
+          <ConnectorPoint PointX="12.125" PointY="18.932444661458334" />
+          <ConnectorPoint PointX="13.625" PointY="18.932444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Departamento_Vista_Vistas" >
+          <ConnectorPoint PointX="12.875" PointY="12.797841796875002" />
+          <ConnectorPoint PointX="14.375" PointY="12.797841796875002" />
+          <ConnectorPoint PointX="14.375" PointY="14.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Energia_Tipo_Suministro_Electrico" >
+          <ConnectorPoint PointX="4.25" PointY="12.547841796875" />
+          <ConnectorPoint PointX="5.5" PointY="12.547841796875" />
+          <ConnectorPoint PointX="5.5" PointY="10.922425130208334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Sitio_Operadora" >
+          <ConnectorPoint PointX="7.5" PointY="5.34568359375" />
+          <ConnectorPoint PointX="7.5" PointY="6.3747054036458328" />
+          <ConnectorPoint PointX="8.5" PointY="6.3747054036458328" />
+          <ConnectorPoint PointX="8.5" PointY="9.4032194010416674" />
+          <ConnectorPoint PointX="10.375" PointY="9.4032194010416674" />
+          <ConnectorPoint PointX="10.375" PointY="6.3747054036458337" />
+          <ConnectorPoint PointX="10.75" PointY="6.3747054036458337" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Sitio_Provincia" >
+          <ConnectorPoint PointX="11.9375" PointY="2.34568359375" />
+          <ConnectorPoint PointX="11.9375" PointY="3.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="SilesModel.FK_Sitio_Tipo_Sitio" >
+          <ConnectorPoint PointX="13.375" PointY="2.4706835937500031" />
+          <ConnectorPoint PointX="13" PointY="2.8456835937500031" />
+          <ConnectorPoint PointX="13" PointY="6.3747054036458337" />
+          <ConnectorPoint PointX="12.25" PointY="6.3747054036458337" />
+        </AssociationConnector>
       </Diagram>
     </Diagrams>
   </Designer>
