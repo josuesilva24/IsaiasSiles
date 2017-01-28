@@ -22,6 +22,7 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtClave = New System.Windows.Forms.TextBox()
@@ -30,7 +31,9 @@ Partial Class Login
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.groupBox1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'groupBox1
@@ -113,6 +116,10 @@ Partial Class Login
         Me.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'Login
         '
         Me.AcceptButton = Me.btnAceptar
@@ -133,6 +140,7 @@ Partial Class Login
         Me.Text = "Ingreso al Sistema"
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -143,5 +151,6 @@ Partial Class Login
     Private WithEvents txtUsuario As System.Windows.Forms.TextBox
     Private WithEvents btnCancelar As System.Windows.Forms.Button
     Private WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 
 End Class
