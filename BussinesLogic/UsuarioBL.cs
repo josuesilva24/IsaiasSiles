@@ -19,6 +19,9 @@ namespace BussinesLogic
         readonly Lazy<UsuarioDAL> _usuarioLazy = new Lazy<UsuarioDAL>(() => new UsuarioDAL());
         UsuarioDAL UsuarioLazy { get { return _usuarioLazy.Value; } }
 
+        readonly Lazy<VistasBL> _vistasBL = new Lazy<VistasBL>(() => new VistasBL());
+        VistasBL VistasBL { get { return _vistasBL.Value; } }
+
         public Session Login(string nombreUsuario, string contrasena)
         {
             var usuario = UsuarioLazy.GetUsuarioByNombreUsuario(nombreUsuario).FirstOrDefault();
@@ -29,9 +32,9 @@ namespace BussinesLogic
             }
             else
             {
-                if (!usuario.Contrasena.Equals(contrasena))
+                if (!usuario.Contrasena.Equals(contrasena, StringComparison.OrdinalIgnoreCase))
                 {
-                    session.Error = _USUARIO_NO_EXISTE;
+                    session.Error = _CONTRASENA_NO_COINCIDE;
                 }
                 else
                 {
@@ -39,7 +42,7 @@ namespace BussinesLogic
                     {
                         Id = usuario.Id,
                         NombreUsuario = usuario.Nombre_Usuario,
-                        Vistas = new List<Vistas>()
+                        Vistas = VistasBL.GetVistasListByUsuario(nombreUsuario)
                     };
                 }
             }
