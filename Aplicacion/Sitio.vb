@@ -100,4 +100,61 @@
 
         Me.Close()
     End Sub
+    Private Sub Sitio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim vistaNombre = "SITIO" 'Nombre de la vista en mayuscula
+        Dim isReadyOnly = False ' Siempre en false
+        'Todos los inputs que se ocupan en readyOnly
+
+        txtAccAconstru.ReadOnly =
+      txtAcometAconst.ReadOnly =
+      txtAltDest.ReadOnly =
+      txtAltTot.ReadOnly =
+      txtAltuTot.ReadOnly =
+      txtAproINGOpAn.ReadOnly =
+      txtCanTENNAdis.ReadOnly =
+      txtCantYDimAntnasRF.ReadOnly =
+      txtCantYDimTX.ReadOnly =
+      txtCosTtPs.ReadOnly =
+      txtDocDmils6.ReadOnly =
+      txtDocDmils7.ReadOnly =
+      txtDocDmils8.ReadOnly =
+      txtENFact.ReadOnly =
+      txtEnvIngOpeANCLA.ReadOnly =
+      txtEstaDproEst.ReadOnly =
+      txtEstatusMantPrev.ReadOnly =
+      txtEstatusSeguroT.ReadOnly =
+      txtEstIngOpAncla.ReadOnly =
+      txtEstObra.ReadOnly =
+      txtEstOKIngTorre.ReadOnly =
+      txtEstRpcObrOp.ReadOnly =
+      txtEstruct.ReadOnly =
+      txtEstruTENNdis.ReadOnly =
+      txtEstrUtili.ReadOnly =
+      txtEstSueFechImp.ReadOnly =
+      txtFchAprCoxCor.ReadOnly =
+      txtFechaInformSeg.ReadOnly =
+      txtFran1D.ReadOnly =
+      txtFran2D.ReadOnly =
+      txtFran3D.ReadOnly =
+      txtFunda.ReadOnly =
+      txtFundacns.ReadOnly =
+      txtipoDestIst.ReadOnly =
+      txtMensuFePla.ReadOnly =
+      txtNivlDapoEs.ReadOnly =
+      txtNivlRFoperANCLA.ReadOnly =
+      txtNivTXOperAncla.ReadOnly =
+      txtProvDobras.ReadOnly =
+      txtProvEstru.ReadOnly =
+      txtSitDconfl.ReadOnly =
+      txtstructra.ReadOnly =
+      txtSupDobras.ReadOnly =
+      txtSuperfConst.ReadOnly =
+      txtTipoAcceso.ReadOnly =
+      txtUtApxLcorp.ReadOnly =
+      isReadyOnly
+
+
+    End Sub
+
+
 End Class
