@@ -67,10 +67,61 @@
         Dim vistaNombre = "ALTERNATIVA" 'Nombre de la vista en mayuscula
         Dim isReadyOnly = False ' Siempre en false
         'Todos los inputs que se ocupan en readyOnly
-        txtAlt.ReadOnly =
+        txtAltDestru.ReadOnly =
+        txtAltLat.ReadOnly =
+        txtAltLon.ReadOnly =
         txtCalle.ReadOnly =
+        txtCanonMens.ReadOnly =
+        txtDistAccPreHespLoc.ReadOnly =
+        txtDistPuntConHespLoc.ReadOnly =
+        txtDocFaltnt.ReadOnly =
+        txtDoComplta.ReadOnly =
+        txtDocuDMilst1.ReadOnly =
+        txtDocuDMilst2.ReadOnly =
+        txtDocuDMilst3.ReadOnly =
+        txtDRSMont.ReadOnly =
+        txtEC1.ReadOnly =
+        txtEC2.ReadOnly =
+        txtEstadoSLA.ReadOnly =
+        txtEstatsAdq.ReadOnly =
+        txtNivlDapoEst.ReadOnly =
         txtNum.ReadOnly =
+        txtObsAdq.ReadOnly =
+        txtObsvLgals.ReadOnly =
+        txtOpComMont.ReadOnly =
+        txtPagsAdltds.ReadOnly =
+        txtSupAlocar.ReadOnly =
+        txtValidMuniTORSC.ReadOnly =
+        txtValiEconOperMO.ReadOnly =
+        txtAlt.ReadOnly =
+        txtAltDestru.ReadOnly =
+        txtAltLat.ReadOnly =
+        txtAltLon.ReadOnly =
+        txtCalle.ReadOnly =
+        txtCanonMens.ReadOnly =
+        txtDistAccPreHespLoc.ReadOnly =
+        txtDistPuntConHespLoc.ReadOnly =
+        txtDocFaltnt.ReadOnly =
+        txtDoComplta.ReadOnly =
+        txtDocuDMilst1.ReadOnly =
+        txtDocuDMilst2.ReadOnly =
+        txtDocuDMilst3.ReadOnly =
+        txtDRSMont.ReadOnly =
+        txtEC1.ReadOnly =
+        txtEC2.ReadOnly =
+        txtEstadoSLA.ReadOnly =
+        txtEstatsAdq.ReadOnly =
+        txtNivlDapoEst.ReadOnly =
+        txtNum.ReadOnly =
+        txtObsAdq.ReadOnly =
+        txtObsvLgals.ReadOnly =
+        txtOpComMont.ReadOnly =
+        txtPagsAdltds.ReadOnly =
+        txtSupAlocar.ReadOnly =
+        txtValidMuniTORSC.ReadOnly =
+        txtValiEconOperMO.ReadOnly =
         isReadyOnly
+
 
     End Sub
 End Class

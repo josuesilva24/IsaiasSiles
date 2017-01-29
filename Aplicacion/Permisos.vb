@@ -51,4 +51,37 @@
 
         Me.Close()
     End Sub
+
+    Private Sub Permisos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim vistaNombre = "PERMISOS" 'Nombre de la vista en mayuscula
+        Dim isReadyOnly = False ' Siempre en false
+        'Todos los inputs que se ocupan en readyOnly
+
+        txtAltPer.ReadOnly =
+        txtAltPermANAC.ReadOnly =
+        txtAltPrmdaTt.ReadOnly =
+        txtDocDmils4.ReadOnly =
+        txtDocDmils5.ReadOnly =
+        txtEstDgesDper.ReadOnly =
+        txtPermAmb.ReadOnly =
+        txtEstDgesDper.ReadOnly =
+        txtFactInTram.ReadOnly =
+        txtFactOtor.ReadOnly =
+        txtHabInTram.ReadOnly =
+        txtHabiOtor.ReadOnly =
+        txtNumDordMun.ReadOnly =
+        txtPermANACinTra.ReadOnly =
+        txtPermANACotor.ReadOnly =
+        txtPermArql.ReadOnly =
+        txtPermDobInTram.ReadOnly =
+        txtPermPatri.ReadOnly =
+        txtPrmDobOtor.ReadOnly =
+        txtProvANNAC.ReadOnly =
+        txtProvGstMuni.ReadOnly =
+        txtTipDEstPerm.ReadOnly =
+        isReadyOnly
+
+    End Sub
+
+
 End Class
