@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using DAL;
+using MapSource;
+
 namespace BussinesLogic
 {
     public class UsuarioBL
@@ -17,22 +19,31 @@ namespace BussinesLogic
         readonly Lazy<UsuarioDAL> _usuarioLazy = new Lazy<UsuarioDAL>(() => new UsuarioDAL());
         UsuarioDAL UsuarioLazy { get { return _usuarioLazy.Value; } }
 
-        public List<string> Login(string nombreUsuario, string contrasena)
+        public Session Login(string nombreUsuario, string contrasena)
         {
             var usuario = UsuarioLazy.GetUsuarioByNombreUsuario(nombreUsuario).FirstOrDefault();
-            var errores = new List<string>();
+            var session = new Session();
             if (usuario == null)
             {
-                errores.Add(_USUARIO_NO_EXISTE);
+                session.Error = _USUARIO_NO_EXISTE;
             }
             else
             {
                 if (!usuario.Contrasena.Equals(contrasena))
                 {
-                    errores.Add(_CONTRASENA_NO_COINCIDE);
+                    session.Error = _USUARIO_NO_EXISTE;
+                }
+                else
+                {
+                    session.Usuario = new Usuario
+                    {
+                        Id = usuario.Id,
+                        NombreUsuario = usuario.Nombre_Usuario,
+                        Vistas = new List<Vistas>()
+                    };
                 }
             }
-            return errores;
+            return session;
         }
     }
 }
