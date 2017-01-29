@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Entity;
 
 namespace DAL
@@ -11,7 +12,7 @@ namespace DAL
         }
         public IQueryable<Usuario> GetUsuarioByNombreUsuario(string nombreUsuario)
         {
-            return GetAllUsuario().Where(x => x.Nombre_Usuario.Equals(nombreUsuario));
+            return GetAllUsuario().Where(x => x.Nombre_Usuario.Equals(nombreUsuario, StringComparison.OrdinalIgnoreCase));
         }
 
     }
