@@ -62,4 +62,15 @@
         txtValiEconOperMO.Clear()
 
     End Sub
+
+    Private Sub Alternativa_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Dim vistaNombre = "ALTERNATIVA" 'Nombre de la vista en mayuscula
+        Dim isReadyOnly = False ' Siempre en false
+        'Todos los inputs que se ocupan en readyOnly
+        txtAlt.ReadOnly =
+        txtCalle.ReadOnly =
+        txtNum.ReadOnly =
+        isReadyOnly
+
+    End Sub
 End Class
