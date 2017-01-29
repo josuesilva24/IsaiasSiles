@@ -1,6 +1,12 @@
-﻿Public Class Menu
+﻿Imports MapSource
 
-    
+Public Class Menu
+
+    Property _session As Session
+
+
+
+
     Private Sub AlternativatoolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AlternativatoolStripMenuItem.Click
         Dim alt As New Alternativa()
         alt.Show()
@@ -60,7 +66,11 @@
     End Sub
 
     Private Sub salirToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles salirToolStripMenuItem.Click
-        Me.Close()
-        End
+        For Each o In _session.Usuario.Vistas
+            MenuToolStripMenuItem.DropDownItems.Item(o.Vista).Visible = True
+        Next
+        'Me.Close()
+        'End
     End Sub
+
 End Class

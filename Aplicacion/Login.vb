@@ -32,9 +32,9 @@ Public Class Login
                 PSS.Show()
                 Me.Hide()
 
+                'End If
+
             End If
-        
-        End If
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
