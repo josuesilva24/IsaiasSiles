@@ -27,4 +27,23 @@
         txtRdioBusq.Clear()
         Me.Close()
     End Sub
+    Private Sub Anillo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim vistaNombre = "ANILLO" 'Nombre de la vista en mayuscula
+        Dim isReadyOnly = False ' Siempre en false
+        'Todos los inputs que se ocupan en readyOnly
+     
+        txtAltRFreq.ReadOnly =
+        txtAltTXreq.ReadOnly =
+        txtAnllat.ReadOnly =
+        txtAnllong.ReadOnly =
+        txtCdgoTRRSC.ReadOnly =
+        txtCodOprdrANCLA.ReadOnly =
+        txtEstDAnilo.ReadOnly =
+        txtNomOprdrANCLA.ReadOnly =
+        txtOprdrANCLA.ReadOnly =
+        txtRdioBusq.ReadOnly =
+        isReadyOnly
+
+
+    End Sub
 End Class
