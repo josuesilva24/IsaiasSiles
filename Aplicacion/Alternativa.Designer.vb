@@ -1508,7 +1508,7 @@ Partial Class Alternativa
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1051, 817)
+        Me.ClientSize = New System.Drawing.Size(1051, 741)
         Me.Controls.Add(Me.txtDocuDMilst3)
         Me.Controls.Add(Me.Label65)
         Me.Controls.Add(Me.txtDocuDMilst2)
