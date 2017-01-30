@@ -395,7 +395,7 @@ Partial Class Sitio
         Me.limpiarButton.BackColor = System.Drawing.Color.White
         Me.limpiarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.limpiarButton.Image = CType(resources.GetObject("limpiarButton.Image"), System.Drawing.Image)
-        Me.limpiarButton.Location = New System.Drawing.Point(1120, 22)
+        Me.limpiarButton.Location = New System.Drawing.Point(1038, 22)
         Me.limpiarButton.Name = "limpiarButton"
         Me.limpiarButton.Size = New System.Drawing.Size(72, 63)
         Me.limpiarButton.TabIndex = 399
@@ -1457,7 +1457,7 @@ Partial Class Sitio
         Me.borrarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.borrarButton.BackColor = System.Drawing.Color.White
         Me.borrarButton.Image = CType(resources.GetObject("borrarButton.Image"), System.Drawing.Image)
-        Me.borrarButton.Location = New System.Drawing.Point(940, 22)
+        Me.borrarButton.Location = New System.Drawing.Point(858, 22)
         Me.borrarButton.Name = "borrarButton"
         Me.borrarButton.Size = New System.Drawing.Size(72, 63)
         Me.borrarButton.TabIndex = 329
@@ -1471,7 +1471,7 @@ Partial Class Sitio
         Me.cancelarButton.BackColor = System.Drawing.Color.White
         Me.cancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cancelarButton.Image = CType(resources.GetObject("cancelarButton.Image"), System.Drawing.Image)
-        Me.cancelarButton.Location = New System.Drawing.Point(1031, 22)
+        Me.cancelarButton.Location = New System.Drawing.Point(949, 22)
         Me.cancelarButton.Name = "cancelarButton"
         Me.cancelarButton.Size = New System.Drawing.Size(72, 63)
         Me.cancelarButton.TabIndex = 327
@@ -1484,7 +1484,7 @@ Partial Class Sitio
         Me.guardarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.guardarButton.BackColor = System.Drawing.Color.White
         Me.guardarButton.Image = CType(resources.GetObject("guardarButton.Image"), System.Drawing.Image)
-        Me.guardarButton.Location = New System.Drawing.Point(848, 22)
+        Me.guardarButton.Location = New System.Drawing.Point(766, 22)
         Me.guardarButton.Name = "guardarButton"
         Me.guardarButton.Size = New System.Drawing.Size(72, 63)
         Me.guardarButton.TabIndex = 325
@@ -2105,7 +2105,7 @@ Partial Class Sitio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1444, 797)
+        Me.ClientSize = New System.Drawing.Size(1362, 741)
         Me.Controls.Add(Me.txtDocDmils8)
         Me.Controls.Add(Me.Label98)
         Me.Controls.Add(Me.txtDocDmils7)
